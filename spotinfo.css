@@ -1,8 +1,8 @@
-/* Spot Info – popup-paneeli oikeaan yläkulmaan */
+/* Spot Info – popup-paneeli */
 #spotinfo-panel {
   position: absolute;
-  top: 10px;
-  right: 260px; /* niin ettei mene surfseekerin päälle */
+  top: 220px; /* Surfseekerin alle */
+  right: 10px;
   z-index: 1000;
   background: rgba(252,236,203,0.96);
   border-radius: 10px;
@@ -23,6 +23,12 @@
   margin-bottom: 6px;
 }
 
+#spotinfo-panel .si-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
 #spotinfo-panel .si-title {
   white-space: nowrap;
 }
@@ -41,10 +47,12 @@
   gap: 8px;
   cursor: pointer;
 }
+
 #spotinfo-panel.collapsed .si-body,
 #spotinfo-panel.collapsed .si-toggle {
   display: none !important;
 }
+
 #spotinfo-panel.collapsed .si-header {
   margin: 0;
 }
